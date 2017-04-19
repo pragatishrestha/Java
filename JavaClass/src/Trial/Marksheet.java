@@ -29,17 +29,20 @@ public class Marksheet {
 		eMarks.close();
 		cMarks.close();
 	
-		float average = (((float) Math.ceil (scienceMarks + mathMarks + englishMarks + computerMarks))/4);
-		System.out.println(average+"%");
+		float total = ((float) Math.ceil (scienceMarks + mathMarks + englishMarks + computerMarks));
+		System.out.println("Your Total Score is: " + total);
 		
-		if (average >=80){
+		float percentage = (total/400)*100;
+		System.out.println("Your Percentage is: " + percentage+"%");
+		
+		if (percentage >=80){
 			System.out.println("Congratulations, you got an A!!");
 		}
-			else if (average >= 70 && average <80)
+			else if (percentage >= 70 && percentage <80)
 			System.out.println("You got a B");
-			else if (average >=60 && average <70)
+			else if (percentage >=60 && percentage <70)
 			System.out.println("You got a C");
-			else if (average >=50 && average <60)
+			else if (percentage >=50 && percentage <60)
 			System.out.println("You got a D");
 			else
 				System.out.println("You have Failed the exam!!");
